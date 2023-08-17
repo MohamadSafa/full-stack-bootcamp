@@ -42,3 +42,19 @@ if (age1 < 18 && !hasDriverLicense && !hasCar){
 }else{
     console.log(needDriver)
 }
+
+//Step 3
+let role = "admin";
+console.log(role);
+switch (role){
+    case "admin":
+        console.log("You Have read and write access for the data");   
+        break;
+    case "user":
+        console.log("You have only read access for the data");
+    case "guest":
+        console.log("You have no access for the data");
+    default:
+        console.log("User role is not recognized");
+        break;
+}
