@@ -57,3 +57,25 @@ var result = (name1 + surname1);
 console.log(result);
 
 //Step 7
+var array2 = ['Chocolate', 'Candy', 'Strawberry', 'Banana', 'Apple', 'Juice', 'Coconut']
+console.log(array2);
+var numb = 5
+console.log(numb);
+let result1 = (array2 === numb)
+console.log(result1); + " - These symbols means that the first is equal to the other and perform strict equality to the whole script, there's no room for coercion "
+let result2 = (array2 !== numb) 
+console.log(result2); + " - These symbols means that the first is not equal to the other"
+let result3 = (array2 == numb)
+console.log(result3); + " - These symbols means that the firsl is equal to the other but doesn't take the whole value sometimes, there's room for coercion"
+let result4 = (array2 != numb)
+console.log(result4); + " - These symbols means that the first is not equal to the other and also doesn't take the whole input value sometimes, there's room for coercion"
+
+var a = [8];
+let result5 = (a > numb)
+console.log(result5);
+let result6 = (a >= numb) 
+console.log(result6);
+let result7 = (a < numb)
+console.log(result7); 
+let result8 = (a <= numb)
+console.log(result8);
