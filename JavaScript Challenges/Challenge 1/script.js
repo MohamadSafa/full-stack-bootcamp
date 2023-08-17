@@ -79,3 +79,11 @@ let result7 = (a < numb)
 console.log(result7); 
 let result8 = (a <= numb)
 console.log(result8);
+
+//Step 8
+var result0 = 5+3*2; + " - It will show no answer whitout the logging"
+console.log(result0);
+var result_1 = 10/2+3;
+console.log(result_1);
+var result_2 = 10/(2+3);
+console.log(result_2); + " - The difference between result1 and result2 is the simple basics of mathematics, parathanses force priority on the equation"
