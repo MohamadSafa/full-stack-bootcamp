@@ -1,8 +1,11 @@
+//Step 1
 console.log('I am linked now!');
 
+//Step 2
 var name = 'Mohamad';
 alert('Mohamad');
 
+//Step 3
 let age = '26'
 console.log(age);
 const lastname = 'Safa'
@@ -10,6 +13,7 @@ console.log(lastname);
 var DOB = '01/09/1996';
 console.log(DOB);
 
+//Step 4
 const string = "This is a text"
 console.log(string) + "used for Strings";
 let boolean1 = true;
@@ -29,6 +33,7 @@ console.log(null) + "used for null display";
 let num2;
 console.log(num2) + "used for undefined value, when we don't put an equal";
 
+//Step 5
 let myText = "Hello! How are you?"
 const counter = 3;
 console.log(counter);
@@ -42,3 +47,13 @@ const doubleQuote =
 console.log(doubleQuote + " - Doublequote will make sure the text input will be displayed even if there is apostrophe in the text but it will not show the counter number");
 const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
 console.log(tryThisAlso + " - In this case, even with an apostrophe in the paragraph, the input is shown correct in the console and the right number is displayed because we used the Backtick");
+
+//Step 6
+let name1 = "John";
+console.log(name1);
+let surname1 = "Doe";
+console.log(surname1);
+var result = (name1 + surname1);
+console.log(result);
+
+//Step 7
