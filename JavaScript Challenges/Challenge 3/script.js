@@ -60,6 +60,30 @@ console.log(compute(10, 5, "subtract"));
 console.log(compute(10, 5, "multiply"));
 console.log(compute(10, 5, "divide"));
 console.log(compute(10, 0, "divide"));
-console.log(compute(10, 5, "power"));
+
+//Step 2
+    //Arrow Function
+const squareNumber = (number) => number * number ;
+console.log(squareNumber(5));
+console.log(squareNumber(9));
+console.log(squareNumber(10));
+
+    //Understanding Scopes
+const globalVar = 10;
+const squareNumber1 = number => {
+    console.log("Inside squareNumber function - globalVar:", globalVar);
+    return number * number;
+};
+console.log("Outside squareNumber function - globalVar:", globalVar);
+console.log(squareNumber1(7));
+
+const localVar = 20;
+const squareNumber2 = number => {
+    return number * number;
+};
+console.log("Outside squareNumber function - localVar:", localVar);
+console.log(squareNumber2(5));
+
+
 
 
