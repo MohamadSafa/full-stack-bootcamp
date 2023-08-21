@@ -84,6 +84,34 @@ const squareNumber2 = number => {
 console.log("Outside squareNumber function - localVar:", localVar);
 console.log(squareNumber2(5));
 
+//Step 3
+//for loop
+for (let i=0; i <= 10; i++) {
+    console.log(i);
+}
 
+//while loop
+    let i = 10;
 
+    while (i >= 1) {
+        console.log(i);
+        i--;
+    }
+    
+//do-while loop
+let i1 = 1;
+do {
+    if (i1 % 2 === 0) {
+        console.log(i1);
+    }
+    i1++;
+}while (i1 <= 10);
 
+//advanced loop challenge
+const favoriteFruits = ["banana", "apple", "strawberry", "kiwi", "watermelon", "blueberry", "mango"];
+
+for (const fruit of favoriteFruits) {
+    if (fruit.length > 5) {
+        console.log(fruit);
+    }
+}
