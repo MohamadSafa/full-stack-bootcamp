@@ -32,3 +32,13 @@ console.log(additionalInfo);
 const fullInfo = {...personalInfo,...additionalInfo};
 console.log(fullInfo);
 
+//Step 3
+    //Destructuring Arrays
+const [firstNum,secondNum,thirdNumb] = fiveNumbers;
+console.log(firstNum,secondNum,thirdNumb);
+
+    //Destructuring Objects
+const {name,age,height} = personalInfo;
+console.log(name,age,height);
+
+
