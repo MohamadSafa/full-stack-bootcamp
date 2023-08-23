@@ -98,3 +98,68 @@ originalDiv.addEventListener('click', (event) => {
           console.log('Email:', email);
         });
       });
+//Step 3 : Advanced DOM Manipulations
+      //Dom Cloning
+      document.addEventListener('DOMContentLoaded', function () {
+        const originalDiv = document.getElementById('original');
+        const cloneButton = document.getElementById('clone-btn');
+        let clonedDiv = null;
+        let isClonedVisible = false;
+      
+        cloneButton.addEventListener('click', function () {
+          if (!clonedDiv) {
+            clonedDiv = originalDiv.cloneNode(true);
+            clonedDiv.querySelector('h1')
+            textContent = 'Cloned';
+            document.body.appendChild(clonedDiv);
+          }
+      
+          if (isClonedVisible) {
+            clonedDiv.style.display = 'none';
+          } else {
+            clonedDiv.style.display = 'block';
+          }
+      
+          isClonedVisible = !isClonedVisible;
+        });
+      });
+
+      //Element Removal
+      document.addEventListener('DOMContentLoaded', function () {
+        const removeHeaderButton = document.getElementById('remove-header-btn');
+        
+        removeHeaderButton.addEventListener ('click', function () {
+          const header = document.querySelector('header');
+          if (header) {
+            header.remove();
+          }
+        });
+      });
+
+      //Inserting Elements
+      function insertBeforeFooter(newElement) {
+        const footer = document.querySelector('footer');
+        if (footer) {
+          footer.parentNode.insertBefore(newElement, footer);
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', function () {
+        const insertElementButton = document.getElementById('insert-element-btn');
+      
+        insertElementButton.addEventListener('click', function () {
+          const newParagraph = document.createElement('p');
+          newParagraph.textContent = 'This is the newly inserted element.';
+          insertBeforeFooter(newParagraph);
+        });
+      });
+      
+      
+      
+      
+      
+            
+      
+      
+      
+      
