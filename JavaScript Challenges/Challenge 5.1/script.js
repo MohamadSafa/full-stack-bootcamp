@@ -56,6 +56,34 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
+//Step 3
+const form = document.createElement("myForm");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const emailInput = form.querySelector("#email"); // Replace with actual email input ID
+  const passwordInput = form.querySelector("#password"); // Replace with actual password input ID
+  const confirmPasswordInput = form.querySelector("#confirmPassword"); // Replace with actual confirm password input ID
+  const messageArea = form.querySelector(".message"); // Replace with an element to display messages
+
+  // Validate email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailInput.value)) {
+    messageArea.textContent = "Please enter a valid email address.";
+    return;
+  }
+
+  // Validate password matching
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    messageArea.textContent = "Passwords do not match.";
+    return;
+  }
+
+  // All fields are valid, display success message
+  messageArea.textContent = "Form submitted successfully!";
+});
+
 
 
 
