@@ -33,4 +33,40 @@ setTimeout(function() {
     console.log("Chained message!"); // Log the chained message
   });
 
+//Step 2 : Diving deeper into Async Operations
+function simulateNetworkRequest() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const randomNumber = Math.random();
+        if (randomNumber < 0.5) {
+          resolve("Data fetched successfully!");
+        } else {
+          reject("Network Error!");
+        }
+      }, 3000);
+    });
+  }
+  async function fetchData() {
+    try {
+      const result = await simulateNetworkRequest();
+      console.log(result); // Success scenario: Data fetched successfully!
+    } catch (error) {
+      console.error(error); // Error scenario: Network Error!
+    }
+  }
+  fetchData();
+  async function fetchSinglePost() {
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+      
+      if (!response.ok) {
+        throw new Error("Network response was not OK");
+      }
   
+      const data = await response.json();
+      console.log(data); // Log the fetched post data
+    } catch (error) {
+      console.error("An error occurred:", error.message);
+    }
+  }
+fetchSinglePost();
