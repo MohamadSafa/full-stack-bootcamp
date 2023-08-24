@@ -7,7 +7,7 @@ const ulDiv = document.querySelector('.ul');
 const footerElement = document.querySelector('footer');
 console.log(menuDiv,headerElement,buttonsDiv,ulDiv,footerElement);
 
-menuDiv.childNodes.forEach(node => {
+headerElement.childNodes.forEach(node => {
     if (node.nodeType === Node.ELEMENT_NODE) {
         console.log(node);
     }
