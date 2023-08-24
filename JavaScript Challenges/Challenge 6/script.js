@@ -70,3 +70,42 @@ function simulateNetworkRequest() {
     }
   }
 fetchSinglePost();
+
+//Step 3 : Advanced Async Patterns 
+
+async function fetchMultiplePosts() {
+    try {
+      const postIds = [1, 2, 3];
+      const promises = postIds.map(id =>
+        fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      );
+  
+      const responses = await Promise.all(promises);
+      const data = await Promise.all(responses.map(response => response.json()));
+  
+      console.log("Combined Data:", data);
+    } catch (error) {
+      console.error("An error occurred:", error.message);
+    }
+  }
+fetchMultiplePosts();
+
+async function fetchSequentialPosts() {
+    try {
+      const postIds = [4, 5, 6, 7, 8];
+      const results = [];
+  
+      for (const id of postIds) {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+        const data = await response.json();
+        results.push(data);
+        console.log("Processed Post:", data);
+      }
+  
+      console.log("Sequential Results:", results);
+    } catch (error) {
+      console.error("An error occurred:", error.message);
+    }
+  }
+  
+fetchSequentialPosts();
