@@ -131,5 +131,3 @@ cPasswordInput.addEventListener('input', function() {
       window.location.href = 'quote.html';
     }
   });
-
-//Step 2
