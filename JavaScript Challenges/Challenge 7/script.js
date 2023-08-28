@@ -132,3 +132,4 @@ cPasswordInput.addEventListener('input', function() {
     }
   });
 
+//Step 2
