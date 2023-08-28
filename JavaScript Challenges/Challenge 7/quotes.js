@@ -159,3 +159,54 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+//Step 4
+document.addEventListener('DOMContentLoaded', function() {
+  const quoteContainer = document.querySelector('.quote-container');
+  const filterInput = document.querySelector('#filter-input'); // Assuming you have an input element with id="filter-input"
+
+  // An array of quotes
+  const quotes = [
+    {
+      text: "I think that beauty can injure you to death...",
+      author: "Toni Servillo"
+    },
+    {
+      text: "Another quote goes here...",
+      author: "Another Author"
+    },
+    // Add more quotes as needed
+  ];
+
+  // Function to display filtered quotes
+  function displayFilteredQuotes(filterValue) {
+    quoteContainer.innerHTML = ''; // Clear existing quotes
+
+    quotes.forEach(function(quoteData) {
+      if (filterValue === '' || quoteData.author.toLowerCase().includes(filterValue.toLowerCase())) {
+        const blockquote = document.createElement('blockquote');
+        blockquote.textContent = quoteData.text;
+
+        const authorDiv = document.createElement('div');
+        authorDiv.classList.add('author');
+        const emDash = document.createElement('span');
+        emDash.textContent = '—';
+        const cite = document.createElement('cite');
+        cite.textContent = quoteData.author;
+        authorDiv.appendChild(emDash);
+        authorDiv.appendChild(cite);
+
+        blockquote.appendChild(authorDiv);
+
+        quoteContainer.appendChild(blockquote);
+      }
+    });
+  }
+
+  // Event listener for filter input changes
+  filterInput.addEventListener('input', function() {
+    displayFilteredQuotes(filterInput.value);
+  });
+
+  // Initial display of all quotes
+  displayFilteredQuotes('');
+});
